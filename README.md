@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+----------------------------
+# ✨ Mini project ✨
 
-You can use the [editor on GitHub](https://github.com/TeamProjectCF/CaffeCRUD/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+ 
++ 저희 프로젝트 주제는 카페 음료 주문서 입니다!  
+   
++ 저희 프로젝트는 ...
+  - 배달의 민족처럼 카페를 집에서도 주문할 수 있는 CRUD를 제작합니다.
+  - take-out과 delivery를 선택할 때 take-out을 선택하면 500원 할인해드립니다.
+  - 간단한 성경 퀴즈를 풀면 500원을 할인해드립니다.
+   
++ 저희 카페는 ...
+  - 카페 이름은 the lord.
+  - 하나님을 찬양하는 카페입니다! 
+  - 카페 내부에서는 찬양과 couch worship의 음악(🎶)이 흘러 나옵니다.
+  - 불우이웃을 돕는 donation box(📦)가 있습니다.
+  - 잔잔한 음악이 들리는 공간이 따로 있어 공부(📚)를 집중적으로 할 수도 있습니다.
+    
++ 카페 메뉴
+  - ☕️coffe: 콜드브루, 콜드브루라떼, 흑당라떼, 아메리카노, 카페라떼, 바닐라라떼, 시나몬라떼, 카라멜라떼, 아몬드라떼, 헤이즐넛라떼, 카페모카
+  - 🧋cooler: 청포도쿨러, 망고쿨러, 자몽쿨러, 복숭아쿨러
+  - 🥤Ade: 청포도에이드, 자몽에이드, 오렌지에이드, 레몬에이드, 망고에이드, 패션후루츠에이드, 깔라만시에이드, 한라봉에이드
+  - 🧉fruit: 땡모반, 리얼딸기우유,생생자몽주스,한라봉주스,애플망고주스
+  - 🍸bingsoo: 팥빙수,흑당빙수,인절미빙수,딸기빙수
+   
++ image
+    
++ 저희 프로젝트의 기능은 ...
+  - 음료와 사이즈를 선택하는 기능 (add)
+  - 추가된 제품의 한 정보를 출력하는 기능 (info)
+  - 추가된 메뉴의 정보를 출력하는 기능 (list)
+  - 추가된 메뉴에서 음료의 사이즈를 변경할 수 있는 기능(update) 
+  - 추가된 메뉴에서 삭제하고 싶은 메뉴 삭제하는 기능 (delete)
+  - 음료 선택 완료 후 내용 저장하는 기능 (save)
+  - 저장된 내용 출력해주는 기능 (load)
+  - 상품 이름 검색을 통해 출력해주는 기능 (search)
+  - 추가된 제품 중 한 제품 선택해주는 기능 (seletData)
+  - 메뉴 추천해주는 기능 (recommand)
+  - 간단한 퀴즈를 통해 할인해주는 기능 (quiz)
+           
++ 저희 프로젝트의 주요 언어는 𝗖언어 입니다!
+        
++ 저희 프로젝트의 팀원은 ...
+  - 서은주: owner, project 구상, coding
+  - 송예지: contributor, project 구상, coding
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TeamProjectCF/CaffeCRUD/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
