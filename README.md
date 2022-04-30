@@ -25,7 +25,7 @@
    
 + 카페 내부
 
-<img src="https://cdn.pixabay.com/photo/2016/08/29/21/24/cafe-1629208_1280.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt=""></img>         
+<img src="https://cdn.pixabay.com/photo/2019/12/15/18/08/cats-cafe-4697753_1280.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt=""></img>         
     
 + 저희 프로젝트의 기능은 ...
   - 음료와 사이즈를 선택하는 기능 (add)
