@@ -24,6 +24,7 @@
   - 🍸bingsoo: 팥빙수,흑당빙수,인절미빙수,딸기빙수
    
 + image
+<img src="https://cdn.pixabay.com/photo/2015/06/24/01/15/coffee-819362_1280.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt=""></img>         
     
 + 저희 프로젝트의 기능은 ...
   - 음료와 사이즈를 선택하는 기능 (add)
