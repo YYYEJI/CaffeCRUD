@@ -23,7 +23,7 @@
   - 🧉fruit: 땡모반, 리얼딸기우유,생생자몽주스,한라봉주스,애플망고주스
   - 🍸bingsoo: 팥빙수,흑당빙수,인절미빙수,딸기빙수
    
-+ 카페 사진
++ 카페 내부
 
 <img src="https://cdn.pixabay.com/photo/2016/08/29/21/24/cafe-1629208_1280.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt=""></img>         
     
