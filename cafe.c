@@ -15,17 +15,18 @@ int total = 0;      // 총합계
 int selectMenu(){
     int menu;
     printf("\n*** Caffe the Lord ***\n");
-    printf("1. 장바구니\n");
-    printf("2. 음료 추가\n");
-    printf("3. 음료 사이즈 변경\n");
-    printf("4. 음료 삭제\n");
-    printf("5. 추가된 음료 저장\n");
-    printf("6. 음료 검색\n");
-    printf("7. 음료 추천\n");
-    printf("8. 랜덤 추천\n");
-    printf("9. 퀴즈\n");
-    printf("0. 종료\n\n");
-    printf("=> 원하는 메뉴는? ");
+    printf("1. shopping basket\n");                    // 장바구니
+    printf("2. Add a drink\n");                        // 음료추가
+    printf("3. Change a size of drink\n");             // ice/hot or size 변경
+    printf("4. Delete a drink\n");                     // 음료삭제
+    printf("5. Search for drinks in ordered list\n");  // 주문된 음료 중에서 검색
+    printf("6. Search for drinks in menu\n");          // 메뉴판 음료 중에서 검색
+    printf("7. Recommend for drinks\n");               // 음료 추천
+    printf("8. Random recommendation\n");              // 음료 랜덤 추천
+    printf("9. Quiz for discount!!!\n");               // 퀴즈를 통해서 할인해주는 event
+    printf("10. Save the info of drink\n");             // 추가된 음료 정보 저장
+    printf("0. Quit\n\n");                             // 주문 완료
+    printf("=> What you want? ");
     scanf("%d", &menu);
     getchar();
 
@@ -42,10 +43,12 @@ int addDrink(Drink *d){
     }     
     printf("\n");
 
-    printf("음료의 번호 입력 > ");
+    printf("Enter the number of menu > ");
     scanf("%d", &d->drink);
+    printf("Ice or Hot (1: ice, 2: hot)> ");
+    scanf("%d", &d->ch);
     getchar();
-    printf("음료(or 빙수)의 사이즈 입력 (T: tall, G: Grande, V: venti)> ");
+    printf("Enter the size of drink(or bingsoo) (T: tall, G: Grande, V: venti)> ");
     scanf("%c", &d->size);
 
     total+=drink_price[d->drink-1];
@@ -53,12 +56,12 @@ int addDrink(Drink *d){
     return 1;  
 }
 void infoDrink(Drink d){
-    printf("    %15s     %c\n", drink_menu[d.drink-1], d.size);
+    printf("    %15s          %d                 %c\n", drink_menu[d.drink-1], d.ch, d.size);
 }
 void listDrink(Drink *d, int cnt){
-    printf("\n\n------- ordered list -------\n");
+    printf("\n\n---------------- ordered list ----------------\n");
 
-    printf("No       name          sise\n");
+    printf("No       name        cold or hot(1 or 2)   sise\n");
     // printf("==========================\n");
     for(int i = 0; i<cnt; i++){
         if(d[i].drink == -1) continue;
@@ -66,11 +69,13 @@ void listDrink(Drink *d, int cnt){
         infoDrink(d[i]);
     }
     printf("\n");
-    printf("현재 총 가격은 %d입니다.\n\n" , total);
+    printf("The total price is %dwon.\n\n" , total);
 }                 
 int updateDrink(Drink *d){
-    printf("음료의 사이즈 변경 (T: tall, G: grande, V: venti) > ");
-    scanf("%c", &d->size);
+    printf("Ice or Hot(1 or 2) > ");
+    scanf("%d", &d->ch);
+    printf("drink size (T: tall, G: grande, V: venti) > ");
+    scanf(" %c", &d->size);
 
     return 1;
 }                           
@@ -79,21 +84,92 @@ int deleteDrink(Drink *d){
     return 1;
 }                       
 void saveData(Drink *d, int cnt){
+    FILE* fp;
 
+    fp = fopen("drink.txt","wt");
+    for(int i = 0; i<cnt; i++){
+        if(d[i].drink == -1) continue;
+        fprintf(fp, "%15s     %d     %c\n", drink_menu[d[i].drink-1],d[i].ch, d[i].size);
+    }
+
+
+    fclose(fp);
+    printf("=> Save!\n");
 }
 int loadData(Drink *d){
+    int cnt = 0;
+    FILE* fp;
+    char t[30];          
+    fp = fopen("drink.txt","rt");
 
+    if(fp == NULL)
+        printf("No file.\n");
+    else{
+        for(int i = 0; i<100; i++){
+            if(feof(fp)) break;
+            fscanf(fp, "%s", t);      
+            // printf("%s", t);   
+            for(int i = 0; i<32; i++){
+                if(strcmp(drink_menu[i], t)){
+                    d[i].drink = i;
+                    break;
+                }
+            }
+            fscanf(fp, "%d", &d[i].ch);
+            fscanf(fp, "%c", &d[i].size);
+
+            cnt++;
+        }
+    }
+    fclose(fp);
     return 1;
 }             
 
 int searchDrink(Drink *d, int cnt){
     int scnt = 0;
+    char search[20];
+
+    printf("What is the name of the drink > ");
+    scanf("%s", search);
+
+    printf("No      name       sise\n");
+    printf("=======================\n");
+    for(int i = 0; i<cnt; i++){
+        if(d[i].drink == -1) continue;
+        if(strstr(drink_menu[d[i].drink-1], search)){
+            printf("    %s     %c\n", drink_menu[d[i].drink-1], d[i].size);
+            scnt++;
+        }
+    }
+    if(scnt == 0) printf("=> No data\n");
+
     return scnt;
-}                
+} 
+int searchDrink_menu(Drink *d, int cnt){
+    int order = 0;
+    char search[20];
+    
+
+    printf("What is the name of the drink > ");
+    scanf("%s", search);
+
+    printf("No      name       \n");
+    printf("=======================\n");
+    for(int i = 0; i<32; i++){
+        if(strstr(drink_menu[i], search)){
+            printf("%d    %s\n",order+1, drink_menu[i] );
+            order++;
+        }
+    }
+    if(order == 0) printf("=> No data!\n");
+    else printf("\nThere are %ddata in total.\n", order);
+
+    return order;
+}                   
 int selectDataNo(Drink *d, int cnt){
     int no;
     listDrink(d, cnt);
-    printf("\n번호는 (취소 :0)? ");
+    printf("\nNumber (cancel :0)? ");
     scanf("%d", &no);
 
     return no;
@@ -108,7 +184,7 @@ int recomendDrink(){
 
     return r;
 }                               
-int random(){
+int d_random(){
     int r;     
     return r;
 }
