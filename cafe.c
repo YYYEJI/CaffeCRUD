@@ -184,9 +184,12 @@ int recomendDrink(){
 
     return r;
 }                               
-int d_random(){
-    int r;     
-    return r;
+void d_random(){
+    int r;
+    r = rand()%32;
+
+    printf("\nHow about %s \n", drink_menu[r]);
+  
 }
 int quiz(){
     int discount = 0;
