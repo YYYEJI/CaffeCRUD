@@ -20,5 +20,5 @@ int searchDrink_menu(Drink *d, int cnt);            // 메뉴 리스트 중에�
 int selectDataNo(Drink *d, int cnt);                // 리스트에 담긴 제품 중 한 제품 선택 
 int recomendDrink();                                // 음료 추천    
 void d_random();                                     // 랜덤추천     
-int quiz();                                         // 성경 관련 퀴즈 맞추면 할인   
+void quiz();                                         // 성경 관련 퀴즈 맞추면 할인   
 
