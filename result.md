@@ -20,12 +20,12 @@
 
   - deleteDrink()             
     => 장바구니에서 원하는 메뉴 삭제          
-    <img src="https://github.com/TeamProjectCF/CaffeCRUD/blob/main/result_screenshot/d_random.png?raw=true" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">
+    <img src="https://github.com/TeamProjectCF/CaffeCRUD/blob/main/result_screenshot/d_random.png?raw=true" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">       
     <img src="https://github.com/TeamProjectCF/CaffeCRUD/blob/main/result_screenshot/deleteDrink2.png?raw=true" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">
 
   - saveData()            
     => 장바구니에 담긴 메뉴 파일에 저장                 
-    <img src="https://github.com/TeamProjectCF/CaffeCRUD/blob/main/result_screenshot/savaData1.png?raw=true" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">
+    <img src="https://github.com/TeamProjectCF/CaffeCRUD/blob/main/result_screenshot/savaData1.png?raw=true" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">                 
     <img src="https://github.com/TeamProjectCF/CaffeCRUD/blob/main/result_screenshot/saveData2.png?raw=true" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">
   
   - loadData()          
