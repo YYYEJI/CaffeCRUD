@@ -15,18 +15,18 @@ int total = 0;      // 총합계
 int selectMenu(){
     int menu;
     printf("\n*** Caffe the Lord ***\n");
-    printf("1. shopping basket\n");                    // 장바구니
-    printf("2. Add a drink\n");                        // 음료추가
-    printf("3. Change a size of drink\n");             // ice/hot or size 변경
-    printf("4. Delete a drink\n");                     // 음료삭제
-    printf("5. Search for drinks in ordered list\n");  // 주문된 음료 중에서 검색
-    printf("6. Search for drinks in menu\n");          // 메뉴판 음료 중에서 검색
-    printf("7. Recommend for drinks\n");               // 음료 추천
-    printf("8. Random recommendation\n");              // 음료 랜덤 추천
-    printf("9. Quiz for discount!!!\n");               // 퀴즈를 통해서 할인해주는 event
-    printf("10. Save the info of drink\n");             // 추가된 음료 정보 저장
-    printf("0. Quit\n\n");                             // 주문 완료
-    printf("=> What you want? ");
+    printf("1. 장바구니\n");                   
+    printf("2. 음료추가\n");                       
+    printf("3. ice/hot or size 변경\n");           
+    printf("4. 음료삭제\n");                     
+    printf("5. 주문된 음료 중에서 검색\n");  
+    printf("6. 메뉴판 음료 중에서 검색\n");         
+    printf("7. 음료 추천\n");               
+    printf("8. 음료 랜덤 추천\n");             
+    printf("9. 퀴즈를 통해서 500 할인 event!!\n");              
+    printf("10. 추가된 음료 정보 저장\n");            
+    printf("0. 주문 완료\n\n");                          
+    printf("=> 어떤 메뉴를 원하십니까? ");
     scanf("%d", &menu);
     getchar();
 
@@ -61,7 +61,7 @@ void infoDrink(Drink d){
 void listDrink(Drink *d, int cnt){
     printf("\n\n---------------- ordered list ----------------\n");
 
-    printf("No       name        cold or hot(1 or 2)   sise\n");
+    printf("No       name        cold or hot(1 or 2)   size\n");
     // printf("==========================\n");
     for(int i = 0; i<cnt; i++){
         if(d[i].drink == -1) continue;
@@ -236,7 +236,7 @@ void d_random(){
 }
 
 void quiz(){
-    int num,score;
+    int num,score=0;
     printf("\n1번     이사야가 활동하던 시기에 당시 남유다의 왕이 아닌 자는? /사1:1\n");
     printf("1) 요담\n");
     printf("2) 아하스\n");
@@ -244,8 +244,11 @@ void quiz(){
     printf("4) 므낫세\n");
     printf("정답: ");
     scanf("%d",&num);
-    if(num==4) score+=1;
-    else printf("오답입니다.\n");
+    if(num==4){
+        printf("\n정답입니다.\n");
+        score+=1;
+    }
+    else printf("\n오답입니다.\n");
     printf(" \n");
     printf("2번     범죄로 인해 유다 백성에게 임한 하나님의 심판이 아닌 것은? /렘 14:12\n");
     printf("1) 지진\n");
@@ -254,7 +257,10 @@ void quiz(){
     printf("4) 염병\n");
     printf("정답: ");
     scanf("%d",&num);
-    if(num==1) score+=1;
+    if(num==1){
+        printf("\n정답입니다.\n");
+        score+=1;
+    }
     else printf("오답입니다.\n");
     printf(" \n");
     printf("3번     에스겔이 본 끓는 가마는 무엇을 상징하는 비유인가? /겔 24;1-14\n");
@@ -264,7 +270,10 @@ void quiz(){
     printf("4) 바벨론의 침입과 유다의 멸망\n");
     printf("정답: ");
     scanf("%d",&num);
-    if(num==4) score+=1;
+    if(num==4){
+        printf("\n정답입니다.\n");
+        score+=1;
+    }
     else printf("오답입니다.\n");
     if(score==3) total-=500;
 }                                       
