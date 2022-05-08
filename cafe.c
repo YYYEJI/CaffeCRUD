@@ -15,18 +15,18 @@ int total = 0;      // 총합계
 int selectMenu(){
     int menu;
     printf("\n*** Caffe the Lord ***\n");
-    printf("1. 장바구니\n");                   
-    printf("2. 음료추가\n");                       
-    printf("3. ice/hot or size 변경\n");           
-    printf("4. 음료삭제\n");                     
-    printf("5. 주문된 음료 중에서 검색\n");  
-    printf("6. 메뉴판 음료 중에서 검색\n");         
-    printf("7. 음료 추천\n");               
-    printf("8. 음료 랜덤 추천\n");             
-    printf("9. 퀴즈를 통해서 500 할인 event!!\n");              
-    printf("10. 추가된 음료 정보 저장\n");            
-    printf("0. 주문 완료\n\n");                          
-    printf("=> 어떤 메뉴를 원하십니까? ");
+    printf("1. shopping basket\n");                    // 장바구니
+    printf("2. Add a drink\n");                        // 음료추가
+    printf("3. Change a size of drink\n");             // ice/hot or size 변경
+    printf("4. Delete a drink\n");                     // 음료삭제
+    printf("5. Search for drinks in ordered list\n");  // 주문된 음료 중에서 검색
+    printf("6. Search for drinks in menu\n");          // 메뉴판 음료 중에서 검색
+    printf("7. Recommend for drinks\n");               // 음료 추천
+    printf("8. Random recommendation\n");              // 음료 랜덤 추천
+    printf("9. Quiz for discount!!!\n");               // 퀴즈를 통해서 할인해주는 event
+    printf("10. Save the info of drink\n");             // 추가된 음료 정보 저장
+    printf("0. Quit\n\n");                             // 주문 완료
+    printf("=> What you want? ");
     scanf("%d", &menu);
     getchar();
 
@@ -132,12 +132,12 @@ int searchDrink(Drink *d, int cnt){
     printf("What is the name of the drink > ");
     scanf("%s", search);
 
-    printf("No      name       sise\n");
+    printf("name       size\n");
     printf("=======================\n");
     for(int i = 0; i<cnt; i++){
         if(d[i].drink == -1) continue;
         if(strstr(drink_menu[d[i].drink-1], search)){
-            printf("    %s     %c\n", drink_menu[d[i].drink-1], d[i].size);
+            printf("%s     %c\n", drink_menu[d[i].drink-1], d[i].size);
             scnt++;
         }
     }
@@ -153,11 +153,11 @@ int searchDrink_menu(Drink *d, int cnt){
     printf("What is the name of the drink > ");
     scanf("%s", search);
 
-    printf("No      name       \n");
+    printf("name     price     \n");
     printf("=======================\n");
     for(int i = 0; i<32; i++){
         if(strstr(drink_menu[i], search)){
-            printf("%d    %s\n",order+1, drink_menu[i] );
+            printf("%s    %d\n", drink_menu[i], drink_price[i] );
             order++;
         }
     }
