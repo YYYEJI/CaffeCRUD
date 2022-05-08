@@ -237,7 +237,7 @@ void d_random(){
 
 void quiz(){
     int num,score;
-    printf("1번     이사야가 활동하던 시기에 당시 남유다의 왕이 아닌 자는? /사1:1\n");
+    printf("\n1번     이사야가 활동하던 시기에 당시 남유다의 왕이 아닌 자는? /사1:1\n");
     printf("1) 요담\n");
     printf("2) 아하스\n");
     printf("3) 히스기야\n");
@@ -245,6 +245,7 @@ void quiz(){
     printf("정답: ");
     scanf("%d",&num);
     if(num==4) score+=1;
+    else printf("오답입니다.\n");
     printf(" \n");
     printf("2번     범죄로 인해 유다 백성에게 임한 하나님의 심판이 아닌 것은? /렘 14:12\n");
     printf("1) 지진\n");
@@ -254,6 +255,7 @@ void quiz(){
     printf("정답: ");
     scanf("%d",&num);
     if(num==1) score+=1;
+    else printf("오답입니다.\n");
     printf(" \n");
     printf("3번     에스겔이 본 끓는 가마는 무엇을 상징하는 비유인가? /겔 24;1-14\n");
     printf("1) 유다 백성들이 배불리 먹게 됨\n");
@@ -263,6 +265,7 @@ void quiz(){
     printf("정답: ");
     scanf("%d",&num);
     if(num==4) score+=1;
+    else printf("오답입니다.\n");
     if(score==3) total-=500;
 }                                       
 
