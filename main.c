@@ -45,9 +45,10 @@ int main(void){
         else if( menu == 6) searchDrink_menu(d, index);
         else if( menu == 7) recomendDrink();
         else if( menu == 8) d_random();
-        else if( menu == 9) quiz();   
-        else if( menu == 10) saveData(d, index);                                                                      
+        else if( menu == 9) quiz();                                                                       
     }
-    printf("종료됨!\n");
+    saveData(d,index);
+    printf("영수증이 저장되었습니다!\n");
+    printf("주문 종료!\n");
     return 0;
 }

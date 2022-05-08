@@ -24,7 +24,6 @@ int selectMenu(){
     printf("7. Recommend for drinks\n");               // 음료 추천
     printf("8. Random recommendation\n");              // 음료 랜덤 추천
     printf("9. Quiz for discount!!!\n");               // 퀴즈를 통해서 할인해주는 event
-    printf("10. Save the info of drink\n");             // 추가된 음료 정보 저장
     printf("0. Quit\n\n");                             // 주문 완료
     printf("=> What you want? ");
     scanf("%d", &menu);
