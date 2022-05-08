@@ -3,7 +3,7 @@
 
 + 함수 소개
   - selectMenu()
-    => 사용자가 실행하고 싶은 menu 선택
+    => 사용자가 실행하고 싶은 menu 선택   
     <img src="/Users/song-yeji/Desktop/OSS_team/result_screenshot/selectmenu.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">
 
   - infoDrink()
