@@ -25,7 +25,7 @@
    
 + 카페 내부
 
-<img src="https://cdn.pixabay.com/photo/2019/12/15/18/08/cats-cafe-4697753_1280.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt=""></img>         
+<img src="https://cdn.pixabay.com/photo/2019/12/15/18/08/cats-cafe-4697753_1280.jpg" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="">        
     
 + 저희 프로젝트의 기능은 ...
   - 음료와 사이즈를 선택하는 기능 (add)
@@ -45,4 +45,5 @@
 + 저희 프로젝트의 팀원은 ...
   - 서은주: owner, project 구상, coding
   - 송예지: contributor, project 구상, coding
+
 
