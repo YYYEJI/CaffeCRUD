@@ -93,7 +93,7 @@ void saveData(Drink *d, int cnt){
 
 
     fclose(fp);
-    printf("=> Save!\n");
+    printf("영수증이 저장되었습니다!\n");
 }
 int loadData(Drink *d){
     int cnt = 0;

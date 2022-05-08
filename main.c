@@ -48,7 +48,6 @@ int main(void){
         else if( menu == 9) quiz();                                                                       
     }
     saveData(d,index);
-    printf("영수증이 저장되었습니다!\n");
     printf("주문 종료!\n");
     return 0;
 }
