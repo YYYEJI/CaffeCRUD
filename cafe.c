@@ -256,6 +256,7 @@ void quiz(){
     printf("4) 염병\n");
     printf("정답: ");
     scanf("%d",&num);
+    
     if(num==1){
         printf("\n정답입니다.\n");
         score+=1;
