@@ -93,7 +93,7 @@ void saveData(Drink *d, int cnt){
 
 
     fclose(fp);
-    printf("=> Save!\n");
+    printf("영수증이 저장되었습니다!\n");
 }
 int loadData(Drink *d){
     int cnt = 0;
@@ -256,7 +256,7 @@ void quiz(){
     printf("4) 염병\n");
     printf("정답: ");
     scanf("%d",&num);
-    
+
     if(num==1){
         printf("\n정답입니다.\n");
         score+=1;
